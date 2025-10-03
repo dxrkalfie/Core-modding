@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   const container = document.querySelector(".container");
   if (container) {
     container.style.opacity = 0;
@@ -78,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (mouse.x && mouse.y) {
         const dx = this.x - mouse.x;
         const dy = this.y - mouse.y;
-        const distance = Math.sqrt(dx*dx + dy*dy);
+        const distance = Math.sqrt(dx * dx + dy * dy);
         if (distance < 100) {
           this.x += dx / distance;
           this.y += dy / distance;
@@ -88,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     draw() {
       ctx.fillStyle = "#00ffcc";
       ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.closePath();
       ctx.fill();
     }
@@ -99,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       for (let b = a; b < particles.length; b++) {
         let dx = particles[a].x - particles[b].x;
         let dy = particles[a].y - particles[b].y;
-        let dist = Math.sqrt(dx*dx + dy*dy);
+        let dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 120) {
           ctx.strokeStyle = "rgba(0,255,204,0.2)";
           ctx.lineWidth = 1;
@@ -113,13 +112,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function animateParticles() {
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
     connectParticles();
     requestAnimationFrame(animateParticles);
   }
 
-  for (let i=0; i<numParticles; i++) {
+  for (let i = 0; i < numParticles; i++) {
     particles.push(new Particle());
   }
   animateParticles();
@@ -144,19 +146,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedState = localStorage.getItem("musicPlaying");
 
     if (savedTime) audio.currentTime = parseFloat(savedTime);
-    if (savedState === "true") audio.play().then(() => { audioBtn.textContent = "⏸️"; }).catch(() => {});
+    if (savedState === "true")
+      audio.play().then(() => {
+        audioBtn.textContent = "⏸️";
+      }).catch(() => {});
 
     audioBtn.addEventListener("click", () => {
       if (audio.paused) {
-        audio.play(); audioBtn.textContent = "⏸️"; localStorage.setItem("musicPlaying", true);
+        audio.play();
+        audioBtn.textContent = "⏸️";
+        localStorage.setItem("musicPlaying", true);
       } else {
-        audio.pause(); audioBtn.textContent = "▶️"; localStorage.setItem("musicPlaying", false);
+        audio.pause();
+        audioBtn.textContent = "▶️";
+        localStorage.setItem("musicPlaying", false);
       }
     });
 
     document.addEventListener("click", () => {
       if (audio.paused && localStorage.getItem("musicPlaying") !== "false") {
-        audio.play().then(() => { audioBtn.textContent = "⏸️"; localStorage.setItem("musicPlaying", true); });
+        audio.play().then(() => {
+          audioBtn.textContent = "⏸️";
+          localStorage.setItem("musicPlaying", true);
+        });
       }
     }, { once: true });
   }
@@ -167,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("musicPlaying", !audio.paused);
     }
   }, 1000);
-
 
   const welcomeHeading = document.getElementById("welcome-heading");
   if (welcomeHeading) {
@@ -205,7 +216,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
     function typeWriter() {
       if (index < welcomeMessage.length) {
-        welcomeText.textContent += welcomeMessage.charAt(index);
+        const char = welcomeMessage.charAt(index);
+        if (char === "\n") {
+          welcomeText.innerHTML += "<br>";
+        } else {
+          welcomeText.innerHTML += char;
+        }
         index++;
         setTimeout(typeWriter, 15);
       }
@@ -230,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch("https://raw.githubusercontent.com/dxrkalfie/Modding-Methods/main/Modding%20Methods/Basic/How%20to%20Get%20Photon%20%26%20Playfab%20Infomation.md")
         .then(response => response.text())
         .then(data => {
-          methodContent.innerHTML = marked.parse(data); 
+          methodContent.innerHTML = marked.parse(data);
           showBtn.textContent = "Hide Method";
         })
         .catch(err => {
@@ -256,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch("https://raw.githubusercontent.com/dxrkalfie/Modding-Methods/main/Modding%20Methods/Basic/How%20to%20Mod.md")
         .then(response => response.text())
         .then(data => {
-          methodContent2.innerHTML = marked.parse(data); 
+          methodContent2.innerHTML = marked.parse(data);
           showBtn2.textContent = "Hide Method";
         })
         .catch(err => {
@@ -264,10 +280,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
   }
-
 });
-
-
-
-
-
