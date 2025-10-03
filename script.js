@@ -187,20 +187,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (welcomeText) {
     const welcomeMessage = `Welcome to Core Official Modding Website! 🎉
 
-Core is a Modding group founded by Blue and Bonk. At Core, We bring you the best mods (JOKE!).
+\nCore is a Modding group founded by Blue and Bonk. At Core, We bring you the best mods (JOKE!).
 
-Please note that this website is made entirely from htmls, css and javascript!
+\nPlease note that this website is made entirely from htmls, css and javascript!
 
-CREDITS: Core Team, ChatGPT (I needed help with some of the javascript alright Calm down I didnt skid i made this all my self!)
+\nCREDITS: Core Team, ChatGPT (I needed help with some of the javascript alright Calm down I didnt skid i made this all my self!)
 
-What stuff means:
-(W) = Working
-(NT) = Not Tested
-(NW) = Not Working
-(D) = Detected
-(OD) = Outdated
+\nWhat stuff means:
+\n(W) = Working
+\n(NT) = Not Tested
+\n(NW) = Not Working
+\n(D) = Detected
+\n(OD) = Outdated
 
-Join our discord for more information!`;
+\nJoin our discord for more information!`;
 
     let index = 0;
     function typeWriter() {
@@ -266,6 +266,7 @@ Join our discord for more information!`;
   }
 
 });
+
 
 
 
