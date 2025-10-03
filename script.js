@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 
-  const welcomeMessage = `
+const welcomeMessage = `
 <p>Core is a modding group founded by Blue and Bonk. At Core, we bring you the best mods (JOKE!).</p>
 
 <p>Please note that this website is made entirely in HTML, CSS, and JavaScript!</p>
@@ -203,26 +203,28 @@ document.addEventListener("DOMContentLoaded", () => {
 <p>Join our Discord for more information!</p>
 `;
 
-  const welcomeText = document.getElementById("welcome-text");
-  if (welcomeText) {
-    welcomeText.innerHTML = welcomeMessage; // <- Added for full message display
+const welcomeText = document.getElementById("welcome-text");
 
-    // Optional typewriter effect
+if (welcomeText) {
+    welcomeText.innerHTML = ""; // Clear any existing content
+
     let index = 0;
+
     function typeWriter() {
-      if (index < welcomeMessage.length) {
-        const char = welcomeMessage.charAt(index);
-        if (char === "\n") {
-          welcomeText.innerHTML += "<br>";
-        } else {
-          welcomeText.innerHTML += char;
+        if (index < welcomeMessage.length) {
+            const char = welcomeMessage.charAt(index);
+            if (char === "\n") {
+                welcomeText.innerHTML += "<br>";
+            } else {
+                welcomeText.innerHTML += char;
+            }
+            index++;
+            setTimeout(typeWriter, 15);
         }
-        index++;
-        setTimeout(typeWriter, 15);
-      }
     }
-    setTimeout(typeWriter, 1500);
-  }
+
+    setTimeout(typeWriter, 500); // Start after half a second
+}
 
   const showBtn = document.getElementById("show-method-btn");
   const methodContent = document.getElementById("method-content");
@@ -276,3 +278,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
