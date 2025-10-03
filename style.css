@@ -208,11 +208,6 @@ body.light-mode .card {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
-#welcome-text {
-  white-space: pre-line;
-}
-
 .show-btn {
   background: #1f1f1f;
   color: #00ffcc;
@@ -344,6 +339,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
