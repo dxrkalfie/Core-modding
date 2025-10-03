@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let index = 0;
     function typeWriter() {
       if (index < welcomeMessage.length) {
-        welcomeText.innerHTML += welcomeMessage.charAt(index);
+        welcomeText.textContent += welcomeMessage.charAt(index);
         index++;
         setTimeout(typeWriter, 15);
       }
@@ -266,6 +266,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
 
 
