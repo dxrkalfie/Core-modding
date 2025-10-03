@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const welcomeHeading = document.getElementById("welcome-heading");
   if (welcomeHeading) {
-    const headingText = "Welcome to DxrkModding!";
+    const headingText = "Welcome to Core Modding!";
     let headingIndex = 0;
     function typeWriterHeading() {
       if (headingIndex < headingText.length) {
@@ -185,13 +185,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const welcomeText = document.getElementById("welcome-text");
   if (welcomeText) {
-    const welcomeMessage = `Welcome to DxrkModding! 🎉
+    const welcomeMessage = `Welcome to Core Official Modding Website! 🎉
 
-We’re a passionate team of modders who love creating, experimenting, and sharing Apks / Stuff we have made with the community. Whether you’re here to discover our talented team members, download our Modded APKs, or learn some of the methods we use, you’ll find plenty of exciting stuff to explore.
+Core is a Modding group founded by Blue and Bonk. At Core, We bring you the best mods (JOKE!).
 
-And if you want to stay up-to-date, chat with us directly, or just hang out with other like-minded people, make sure to join our Discord server — it's where all the Apks and discussions happen!
+Please note that this website is made entirely from htmls, css and javascript!
 
-Thanks for stopping by, and much love from all of us here at DxrkModding. ❤️`;
+CREDITS: Core Team, ChatGPT (I needed help with some of the javascript alright Calm down I didnt skid i made this all my self!)
+
+What stuff means:
+(W) = Working
+(NT) = Not Tested
+(NW) = Not Working
+(D) = Detected
+(OD) = Outdated
+
+Join our discord for more information!`;
 
     let index = 0;
     function typeWriter() {
@@ -257,5 +266,6 @@ Thanks for stopping by, and much love from all of us here at DxrkModding. ❤️
   }
 
 });
+
 
 
