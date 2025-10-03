@@ -68,9 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
       this.speedX = (Math.random() - 0.5) * 2;
       this.speedY = (Math.random() - 0.5) * 2;
     }
+
     update() {
       this.x += this.speedX;
       this.y += this.speedY;
+
       if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
       if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
 
@@ -84,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
+
     draw() {
       ctx.fillStyle = "#00ffcc";
       ctx.beginPath();
@@ -96,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function connectParticles() {
     for (let a = 0; a < particles.length; a++) {
       for (let b = a; b < particles.length; b++) {
-        let dx = particles[a].x - particles[b].x;
-        let dy = particles[a].y - particles[b].y;
-        let dist = Math.sqrt(dx * dx + dy * dy);
+        const dx = particles[a].x - particles[b].x;
+        const dy = particles[a].y - particles[b].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 120) {
           ctx.strokeStyle = "rgba(0,255,204,0.2)";
           ctx.lineWidth = 1;
@@ -146,10 +149,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedState = localStorage.getItem("musicPlaying");
 
     if (savedTime) audio.currentTime = parseFloat(savedTime);
-    if (savedState === "true")
+    if (savedState === "true") {
       audio.play().then(() => {
         audioBtn.textContent = "⏸️";
       }).catch(() => {});
+    }
 
     audioBtn.addEventListener("click", () => {
       if (audio.paused) {
@@ -180,39 +184,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 1000);
 
-  const welcomeHeading = document.getElementById("welcome-heading");
-  if (welcomeHeading) {
-    const headingText = "Welcome to Core Modding!";
-    let headingIndex = 0;
-    function typeWriterHeading() {
-      if (headingIndex < headingText.length) {
-        welcomeHeading.innerHTML += headingText.charAt(headingIndex);
-        headingIndex++;
-        setTimeout(typeWriterHeading, 100);
-      }
-    }
-    setTimeout(typeWriterHeading, 500);
-  }
+  const welcomeMessage = `
+<p>Core is a modding group founded by Blue and Bonk. At Core, we bring you the best mods (JOKE!).</p>
+
+<p>Please note that this website is made entirely in HTML, CSS, and JavaScript!</p>
+
+<p><strong>CREDITS:</strong> Core Team, ChatGPT (I needed a bit of help, okay? Calm down — I didn’t skid, I made this all myself!)</p>
+
+<div style="margin: 20px 0; line-height: 1.6;">
+  <strong>What stuff means:</strong><br>
+  (W) = Working <br>
+  (NT) = Not Tested <br>
+  (NW) = Not Working <br>
+  (D) = Detected <br>
+  (OD) = Outdated
+</div>
+
+<p>Join our Discord for more information!</p>
+`;
 
   const welcomeText = document.getElementById("welcome-text");
   if (welcomeText) {
-    const welcomeMessage = `Welcome to Core Official Modding Website! 🎉
+    welcomeText.innerHTML = welcomeMessage; // <- Added for full message display
 
-\nCore is a Modding group founded by Blue and Bonk. At Core, We bring you the best mods (JOKE!).
-
-\nPlease note that this website is made entirely from htmls, css and javascript!
-
-\nCREDITS: Core Team, ChatGPT (I needed help with some of the javascript alright Calm down I didnt skid i made this all my self!)
-
-\nWhat stuff means:
-\n(W) = Working
-\n(NT) = Not Tested
-\n(NW) = Not Working
-\n(D) = Detected
-\n(OD) = Outdated
-
-\nJoin our discord for more information!`;
-
+    // Optional typewriter effect
     let index = 0;
     function typeWriter() {
       if (index < welcomeMessage.length) {
