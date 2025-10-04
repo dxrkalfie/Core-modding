@@ -15,8 +15,7 @@ body {
 }
 
 :root {
-  --accent: #00ffcc;
-  --core: #00537D;
+  --accent: #00537D;
   --bg-dark: rgba(20, 20, 20, 0.75);
   --glass: rgba(255, 255, 255, 0.05);
 }
@@ -345,6 +344,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
