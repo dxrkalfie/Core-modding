@@ -80,8 +80,6 @@ nav a:hover {
   border: 1px solid rgba(0, 83, 125, 0.3); /* subtle teal border */
   background: rgba(0, 83, 125, 0.05); /* subtle teal tint */
   box-shadow: 0 0 25px rgba(0, 83, 125, 0.2);
-  border-radius: 16px;
-  padding: 25px;
 }
 
 .team-title {
@@ -95,10 +93,6 @@ nav a:hover {
 .card {
   border: 1px solid rgba(0, 83, 125, 0.3);
   background: rgba(25, 25, 25, 0.9); /* dark base like friend cards */
-  border-radius: 16px;
-  padding: 25px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -107,17 +101,11 @@ nav a:hover {
 }
 
 .card img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
   border: 3px solid #00537D;
   box-shadow: 0 0 12px #00537D; /* image glow */
 }
 
 .card h3 {
-  margin-top: 18px;
-  font-size: 1.3rem;
   color: #00537D;
   text-shadow: 0 0 6px #00537D;
 }
@@ -339,6 +327,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
