@@ -70,6 +70,10 @@ nav a:hover {
   animation: fadeUp 1s ease;
 }
 
+.center-text {
+  text-align: center;
+}
+
 /* Team Section */
 .team {
   border: 1px solid rgba(0, 255, 204, 0.3); /* teal border */
@@ -339,6 +343,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
