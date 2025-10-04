@@ -75,7 +75,6 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Team Section */
 .team {
   border: 1px solid var(--accent);
   background: var(--accent);
@@ -92,7 +91,6 @@ nav a:hover {
   text-shadow: 0 0 12px var(--accent);
 }
 
-/* Team Cards */
 .card {
   border: 1px solid var(--accent);
   background: rgba(15, 15, 15, 0.9);
@@ -101,6 +99,12 @@ nav a:hover {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
 }
 
 .card:hover {
@@ -341,6 +345,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
