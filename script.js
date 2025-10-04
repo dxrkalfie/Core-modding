@@ -10,17 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
       container.style.transform = "translateY(0)";
     }, 100);
   }
-  
-  const container2 = document.querySelector(".container2");
-  if (container2) {
-    container2.style.opacity = 0;
-    container2style.transform = "translateY(20px)";
-    setTimeout(() => {
-      container2.style.transition = "opacity 1s ease, transform 1s ease";
-      container2.style.opacity = 1;
-      container2.style.transform = "translateY(0)";
-    }, 100);
-  }
 
   const navLinks = document.querySelectorAll("nav a");
   navLinks.forEach(link => {
@@ -246,5 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
 
