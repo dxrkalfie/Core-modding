@@ -75,40 +75,37 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Team Section Styled like Friends */
+/* Team Section */
 .team {
-  border: 1px solid rgba(0, 83, 125, 0.3); /* subtle teal border */
-  background: rgba(0, 83, 125, 0.05); /* subtle teal tint */
-  box-shadow: 0 0 25px rgba(0, 83, 125, 0.2);
+  border: 1px solid rgba(0, 255, 204, 0.3); /* subtle teal border */
+  background: rgba(0, 255, 204, 0.05); /* very light teal tint */
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.2); /* soft teal glow */
+  border-radius: 16px;
+  padding: 25px;
 }
 
 .team-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
-  color: #00537D;
-  text-shadow: 0 0 12px #00537D;
+  color: var(--accent);
+  text-shadow: 0 0 12px var(--accent);
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 25px;
-}
-
+/* Team Cards */
 .card {
-  border: 1px solid rgba(0, 83, 125, 0.3);
-  background: rgba(25, 25, 25, 0.9); /* dark base like friend cards */
+  border: 1px solid rgba(0, 255, 204, 0.3); /* border soft teal */
+  background: rgba(15, 15, 15, 0.9); /* slightly lighter dark bg */
   border-radius: 16px;
   padding: 25px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* deeper shadow for pop */
 }
 
 .card:hover {
   transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 0 20px #00537D; /* glow on hover */
+  box-shadow: 0 0 25px var(--accent); /* brighter glow on hover */
 }
 
 .card img {
@@ -116,15 +113,15 @@ nav a:hover {
   height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #00537D;
-  box-shadow: 0 0 12px #00537D; /* image glow */
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 15px var(--accent); /* more noticeable glow */
 }
 
 .card h3 {
   margin-top: 18px;
   font-size: 1.3rem;
-  color: #00537D;
-  text-shadow: 0 0 6px #00537D;
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent); /* stronger text glow */
 }
 /* Friends Section */
 .friends {
@@ -344,6 +341,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
