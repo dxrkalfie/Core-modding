@@ -185,22 +185,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
 
     const welcomeMessage = `
-<p>Core is a modding group founded by Blue and Bonk. At Core, we bring you the best mods (JOKE!).</p>
+Core is a modding group founded by Blue and Bonk. At Core, we bring you the best mods (JOKE!).
 
-<p>Please note that this website is made entirely in HTML, CSS, and JavaScript!</p>
+Please note that this website is made entirely in HTML, CSS, and JavaScript!</p>
 
-<p><strong>CREDITS:</strong> Core Team, ChatGPT (I needed a bit of help, okay? Calm down — I didn’t skid, I made this all myself!)</p>
+CREDITS:Core Team, ChatGPT (I needed a bit of help, okay? Calm down — I didn’t skid, I made this all myself!)
 
-<div style="margin: 20px 0; line-height: 1.6;">
-    <strong>What stuff means:</strong><br>
-    (W) = Working <br>
-    (NT) = Not Tested <br>
-    (NW) = Not Working <br>
-    (D) = Detected <br>
+    What stuff means:
+    (W) = Working 
+    (NT) = Not Tested 
+    (NW) = Not Working
+    (D) = Detected 
     (OD) = Outdated
-</div>
 
-<p>Join our Discord for more information!</p>
+Join our Discord for more information!
 `;
 
     const welcomeText = document.getElementById("welcome-text");
@@ -278,3 +276,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
