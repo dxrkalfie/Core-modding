@@ -123,7 +123,7 @@ nav a:hover {
 .card h3 {
   margin-top: 18px;
   font-size: 1.3rem;
-  color: #00ffcc;
+  color: var(--accent);
   text-shadow: 0 0 8px var(--accent);
 }
 /* Friends Section */
@@ -344,6 +344,7 @@ footer {
   margin-top: 40px;
 
 }
+
 
 
 
